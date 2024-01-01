@@ -62,7 +62,12 @@ function User() {
     <main>
       <header className={ styles.header }>
         <h2>Playlist Films</h2>
-        <button className={ styles.btn }>Sua Playlist</button>
+        <button
+          onClick={ () => navigate('/playlistUser') }
+          className={ styles.btn }
+        >
+          Sua Playlist
+        </button>
       </header>
       <section className={ styles.container }>
         { films && films.map((film) => (

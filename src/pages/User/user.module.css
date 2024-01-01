@@ -17,6 +17,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  margin-bottom: 5%;
+  box-shadow: -20px 1px 150px white;
 }
 
 .title {
@@ -52,7 +55,7 @@ main {
 
 .card {
   display: flex;
-  margin: 5%;
+  margin: 4%;
   text-align: center;
   border: 2px solid rgb(240, 236, 236);
   padding: 1%;
