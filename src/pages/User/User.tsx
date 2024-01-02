@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import userContext from '../../context/user.context';
