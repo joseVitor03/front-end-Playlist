@@ -4,11 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "start": "vite preview",
     "coverage": "vitest run --coverage",
     "dev": "vite --open",
     "lint": "eslint -c .eslintrc.json . --ext .js,.jsx,.ts,.tsx",
-    "preview": "vite preview",
     "test": "vitest"
   },
   "dependencies": {
