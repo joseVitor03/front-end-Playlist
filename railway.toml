@@ -1,0 +1,10 @@
+# railway.toml
+
+# Use o plugin "frontend" para configurar a construção do frontend
+plugins = ["frontend"]
+
+# Comandos para construir e iniciar o frontend
+[[services]]
+  name = "web"
+  type = "frontend"
+  script = "vite build && vite preview --host 0.0.0.0"
