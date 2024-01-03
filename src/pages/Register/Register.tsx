@@ -4,7 +4,7 @@ import userContext from '../../context/user.context';
 import cine from './Drive-in movie theater-amico.svg';
 
 function Register() {
-  const { handleChange, register, handleFormRegister } = useContext(userContext);
+  const { handleChangeRegister, register, handleFormRegister } = useContext(userContext);
   return (
     <main className={ styles.PageLogin }>
       <section className={ styles.containerDriveIn }>
@@ -18,7 +18,7 @@ function Register() {
               id="name"
               type="text"
               value={ register.name }
-              onChange={ (e) => handleChange(e) }
+              onChange={ (e) => handleChangeRegister(e) }
             />
           </label>
           <label htmlFor="email">
@@ -27,7 +27,7 @@ function Register() {
               id="email"
               type="email"
               value={ register.email }
-              onChange={ (e) => handleChange(e) }
+              onChange={ (e) => handleChangeRegister(e) }
             />
           </label>
           <label htmlFor="password">
@@ -36,7 +36,7 @@ function Register() {
               id="password"
               type="password"
               value={ register.password }
-              onChange={ (e) => handleChange(e) }
+              onChange={ (e) => handleChangeRegister(e) }
             />
           </label>
           <button>Login</button>

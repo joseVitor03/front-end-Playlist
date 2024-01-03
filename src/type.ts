@@ -34,5 +34,6 @@ export type PropUserContext = {
   handleForm: (event: React.FormEvent<HTMLFormElement>) => void,
   handleFormRegister: (event: React.FormEvent<HTMLFormElement>) => void,
   resultLogin: TypeResultLogin,
-  register: PropRegister
+  register: PropRegister,
+  handleChangeRegister: (event: React.ChangeEvent<HTMLInputElement>) => void,
 };

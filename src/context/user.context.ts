@@ -8,6 +8,7 @@ const userContext = createContext({
   handleFormRegister: () => {},
   resultLogin: { token: '', userId: 0, data: { message: '' } },
   register: { name: '', email: '', password: '' },
+  handleChangeRegister: () => {},
 } as PropUserContext);
 
 export default userContext;

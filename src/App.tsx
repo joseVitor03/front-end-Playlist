@@ -9,7 +9,7 @@ import PlaylistUser from './pages/PlaylistUser/PlaylistUser';
 
 function App() {
   const { handleChange, form, handleForm,
-    resultLogin, handleFormRegister, register } = useLogin();
+    resultLogin, handleFormRegister, register, handleChangeRegister } = useLogin();
 
   const valueLogin = {
     form,
@@ -18,6 +18,7 @@ function App() {
     resultLogin,
     handleFormRegister,
     register,
+    handleChangeRegister,
   };
   return (
     <userContext.Provider value={ valueLogin }>
@@ -25,8 +26,8 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="login" element={ <Login /> } />
         <Route path="/register" element={ <Register /> } />
-        <Route path="user" element={ <User /> } />
-        <Route path="playlistUser" element={ <PlaylistUser /> } />
+        <Route path="/user" element={ <User /> } />
+        <Route path="/playlistUser" element={ <PlaylistUser /> } />
       </Routes>
     </userContext.Provider>
   );

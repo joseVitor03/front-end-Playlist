@@ -20,10 +20,19 @@ const useLogin = () => {
   const [form, setForm] = useState<PropForm>(InitialForm);
   const [register, setRegister] = useState<PropRegister>(InitialRegister);
   const [resultLogin, setResultLogin] = useState<TypeResultLogin>({});
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, id } = event.target;
     setForm({
       ...form,
+      [id]: value,
+    });
+  };
+
+  const handleChangeRegister = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value, id } = event.target;
+    setRegister({
+      ...register,
       [id]: value,
     });
   };
@@ -44,7 +53,7 @@ const useLogin = () => {
   const handleFormRegister = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
-      const result = await axios.post<PropForm, AxiosResponse>(`${api}/register`, form);
+      const result = await axios.post<TypeResultLogin>(`${api}/register`, register);
       setResultLogin(result.data);
       navigate('/user');
       setRegister(InitialRegister);
@@ -61,6 +70,7 @@ const useLogin = () => {
     resultLogin,
     handleFormRegister,
     register,
+    handleChangeRegister,
   };
 };
 

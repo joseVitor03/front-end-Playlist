@@ -34,7 +34,7 @@ function Home() {
             className={ styled.btn }
             onClick={ () => navigate('/register') }
           >
-            Criar conta test
+            Criar conta
           </button>
         </div>
       </header>
